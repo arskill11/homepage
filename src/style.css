@@ -15,7 +15,7 @@ body {
 
 .aboutMeSection {
   display: flex;
-  padding: 0 15rem;
+  padding: 0 20rem;
 }
 
 .aboutMeText {
@@ -25,7 +25,7 @@ body {
   border: 1px solid gray;
   height: 280px;
   padding: 10px 20px;
-  box-shadow: 2px 2px 3px lightgray;
+  box-shadow: 5px 5px 5px rgb(186, 185, 185);
   overflow: auto;
 }
 
@@ -38,6 +38,10 @@ body {
   height: 350px;
   background-color: gray;
   flex: 0 0 300px;
+  background-image: url('./profile-pic.jpeg');
+  background-position: 50% 10%;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .aboutMeHeader {
@@ -53,6 +57,7 @@ body {
   width: 100%;
   align-items: center;
   gap: 1rem;
+  animation: pop 4s;
 }
 
 .mainSection .myWorkHeader {
@@ -64,11 +69,13 @@ body {
   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  */
   grid-template-columns: repeat(3, 350px);
   grid-template-rows: repeat(2, 380px);
-  gap: 25px;
+  gap: 30px;
 }
 
 .project {
-  border: 1px solid black;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px rgb(186, 185, 185);
+  border-radius: 5px;
 }
 
 .projectScreenshot {
@@ -76,6 +83,36 @@ body {
   padding: 0;
   width: 100%;
   background-color: black;
+  background-size: contain;
+}
+
+#weather-app {
+  background-image: url('weather-app-pic.png');
+}
+
+#tic-tac-toe {
+  background-image: url('tic-tac-toe-pic.png');
+  background-size: cover;
+}
+
+#library {
+  background-image: url('library-pic.png');
+}
+
+#toDoList {
+  background-image: url('toDoList-pic.png');
+}
+
+#etch-a-sketch {
+  background-image: url('etch-a-sketch-pic.png');
+}
+
+#battleship {
+  background-color: gray;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projectInfoContainer {
@@ -111,8 +148,6 @@ body {
   background-color: white;
   border: 0;
   width: min-content;
-  height: 1uto;
-
 }
 
 .evicon-github-original {
@@ -144,12 +179,6 @@ a, a:hover, a:focus, a:active {
   height: 100%;
 }
 
-.footerImg {
-  justify-self: flex-start;
-  flex: 0 0 50%;
-  background-color: gray;
-  height: 100%;
-}
 
 .contactHeader {
   font-size: 3rem;
@@ -157,10 +186,61 @@ a, a:hover, a:focus, a:active {
   margin: 0;
 }
 
+.address {
+  font-weight: bold;
+}
+
 .phoneNumber,
 .emailAddress {
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
+
+.email,
+.phone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.email-icon,
+.phone-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert();
+}
+
+.iconLinks {
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  display: flex;
+  gap: 15px;
+}
+
+.iconLinks button {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+}
+
+.iconLinks button a div {
+  width: 100%;
+  height: 100%;
+}
+
+.github-icon {
+  background-image: url('github.svg');
+}
+
+.instagram-icon {
+  background-image: url('instagram.svg');
+}
+
 
 @media (max-width: 1200px) {
   .aboutMeSection {
@@ -199,6 +279,20 @@ a, a:hover, a:focus, a:active {
 
   .aboutMeSection {
     padding: 0 2rem;
+    flex-direction: column;
+  }
+
+  .aboutMeSection .imagePlaceholder {
+    background-position: 50% 15%;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
