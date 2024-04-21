@@ -9,4 +9,5 @@ const phoneIconPlaceholder = document.querySelector('.phone-icon');
 
 emailIcomPlaceholder.src = emailIcon;
 phoneIconPlaceholder.src = phoneIcon;
+
 // profilePhotoPlaceholder.src = profilePhoto;
