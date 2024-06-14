@@ -29,6 +29,11 @@ body {
   overflow: auto;
 }
 
+.aboutMeParagraph {
+  font-size: 30px;
+  font-style: italic;
+}
+
 ::-webkit-scrollbar {
   width: 2px;
   background: transparent; /* make scrollbar transparent */
@@ -68,7 +73,7 @@ body {
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  */
   grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, 380px);
+  grid-template-rows: repeat(3, 380px);
   gap: 30px;
 }
 
@@ -109,6 +114,18 @@ body {
 
 #battleship {
   background-image: url('battleship-pic.png');
+}
+
+#cv-application {
+  background-image: url('cv-application.png');
+}
+
+#memory-cards {
+  background-image: url('memory-cards.png');
+}
+
+#shopping-cart {
+  background-image: url('shopping-cart.png');
 }
 
 .projectInfoContainer {
